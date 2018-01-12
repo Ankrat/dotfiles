@@ -58,7 +58,6 @@ main() {
     # Prefered shell env
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     chsh -s "$HOMEBREW_PREFIX/bin/zsh" &> /dev/null
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
     print_result $? "Bash (use latest version)"
 
