@@ -11,7 +11,7 @@ set_preferences() {
                 && defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4" \
         "Open and save files as UTF-8 encoded"
 
-    execute "defaults write com.apple.TextEdit RichText -" \
+    execute "defaults write com.apple.TextEdit RichText -int 0" \
         "Use plain text mode for new documents"
 
 }

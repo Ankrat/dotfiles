@@ -29,8 +29,8 @@ main() {
 
     # Prefered shell env
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    brew_install "zsh" "zsh"
-    brew_install "zsh Completion" "zsh-completions"
+    # brew_install "zsh" "zsh"
+    # brew_install "zsh Completion" "zsh-completions"
     
     ./change_default_bash_version.sh
 

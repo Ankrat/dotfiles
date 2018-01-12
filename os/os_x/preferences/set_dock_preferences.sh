@@ -38,8 +38,12 @@ set_preferences() {
     execute "defaults write com.apple.dock showhidden -bool true" \
         "Make icons of hidden applications translucent"
 
+    # Set the icon size of Dock items to 60 pixels
     execute "defaults write com.apple.dock tilesize -int 60" \
         "Set icon size"
+
+    execute  "defaults write com.apple.dock launchanim -bool false"
+        "Don’t animate opening applications from the Dock"
 
 }
 
