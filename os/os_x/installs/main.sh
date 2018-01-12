@@ -38,13 +38,13 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "Android File Transfer" "android-file-transfer" "caskroom/cask" "cask"
     brew_install "Visual Studio Code" "visual-studio-code" "caskroom/cask" "cask"
+    #brew_install "iTerm 2" "iterm2" "caskroom/cask" "cask"
     
-    brew_install "Slack" "slack" "caskroom/cask" "cask"
-    brew_install "iTerm 2" "iterm2" "caskroom/cask" "cask"
     brew_install "1Password" "1password" "caskroom/cask" "cask"
     brew_install "Filezilla" "filezilla" "caskroom/cask" "cask"
+    brew_install "Sourcetree" "sourcetree" "caskroom/cask" "cask"
+
 
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"    
     brew_install "Firefox" "firefox" "caskroom/cask" "cask"
@@ -66,6 +66,10 @@ main() {
 
     #brew_install "tmux" "tmux"
     brew_install "Transmission" "transmission" "caskroom/cask" "cask"
+    brew_install "Android File Transfer" "android-file-transfer" "caskroom/cask" "cask"
+
+    brew_install "Slack" "slack" "caskroom/cask" "cask"
+    brew_install "Skype" "skype" "caskroom/cask" "cask"
     brew_install "Dropbox" "dropbox" "caskroom/cask" "cask"
     brew_install "Git" "git"
     brew_install "Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
