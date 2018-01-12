@@ -38,7 +38,7 @@ export NVM_DIR="'$NVM_DIRECTORY'"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Install `nvm` and add the necessary configs to `~/.bash_local`
+    # Install `nvm` and add the necessary configs to `~/.bash.local`
 
     if [ ! -d "$NVM_DIRECTORY" ]; then
 
@@ -46,9 +46,9 @@ export NVM_DIR="'$NVM_DIRECTORY'"
         print_result $? "nvm"
 
         if [ $? -eq 0 ]; then
-            printf "%s" "$CONFIGS" >> "$HOME/.bash_local" \
-                && source "$HOME/.bash_local"
-            print_result $? "nvm (update ~/.bash_local)"
+            printf "%s" "$CONFIGS" >> "$HOME/.bash.local" \
+                && source "$HOME/.bash.local"
+            print_result $? "nvm (update ~/.bash.local)"
         fi
 
     fi
