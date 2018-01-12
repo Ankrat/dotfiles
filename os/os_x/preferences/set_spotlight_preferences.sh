@@ -16,7 +16,8 @@ set_preferences() {
     # 	MENU_SPOTLIGHT_SUGGESTIONS (send search queries to Apple)
     # 	MENU_WEBSEARCH             (send search queries to Apple)
     # 	MENU_OTHER
-
+	ask_for_sudo
+	
     execute 'defaults write com.apple.spotlight orderedItems' -array \
 	'{"enabled" = 1;"name" = "APPLICATIONS";}' \
 	'{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
