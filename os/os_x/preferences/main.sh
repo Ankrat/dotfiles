@@ -23,7 +23,7 @@ main() {
     ./set_safari_preferences.sh
     ./set_terminal_preferences.sh
     ./set_textedit_preferences.sh
-    #./set_trackpad_preferences.sh
+    ./set_trackpad_preferences.sh
     ./set_spotlight_preferences.sh
     ./set_system_preferences.sh
     ./set_transmission_preferences.sh
