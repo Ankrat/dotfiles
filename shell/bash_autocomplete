@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# [!] Do not rename this file to `bash_completion`
+#     as it will create an infinite loop!
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+declare DOTFILES_DIR_PATH="$(dirname $(dirname $(readlink $BASH_SOURCE)))"
+
+source "$DOTFILES_DIR_PATH/os/utils.sh" \
+    && declare OS="$(get_os)"
+
+# ----------------------------------------------------------------------
+
+# Enable programmable completion features
+# http://tldp.org/LDP/abs/html/tabexpansion.html
+
+if [ "$OS" == "osx" ]; then
+    source "$DOTFILES_DIR_PATH/shell/os_x/bash_autocomplete"
+elif [ "$OS" == "ubuntu" ]; then
+    source "$DOTFILES_DIR_PATH/shell/ubuntu/bash_autocomplete"
+fi
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Cleanup
+
+unset DOTFILES_DIR_PATH
+unset OS
