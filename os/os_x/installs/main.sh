@@ -39,7 +39,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     brew_install "Android File Transfer" "android-file-transfer" "caskroom/cask" "cask"
-    #brew_install "Visual Studio Code" "visual-studio-code" "caskroom/cask" "cask"
+    brew_install "Visual Studio Code" "visual-studio-code" "caskroom/cask" "cask"
 
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"    
     brew_install "Firefox" "firefox" "caskroom/cask" "cask"
