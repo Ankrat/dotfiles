@@ -20,9 +20,17 @@ main() {
     print_in_green "\n  ---\n\n"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    
+    # Default Bash from Original script
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    brew_install "Bash" "bash"
+    brew_install "Bash Completion 2" "bash-completion2" "homebrew/versions"
 
-    brew_install "zsh"
-    brew_install "zsh-completions"
+
+    # Prefered shell env
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    brew_install "zsh" "zsh"
+    brew_install "zsh Completion" "zsh-completions"
     
     ./change_default_bash_version.sh
 

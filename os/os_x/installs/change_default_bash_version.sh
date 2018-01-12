@@ -51,10 +51,14 @@ main() {
     # Make OS X use the Bash version installed through Homebrew
     # https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/chsh.1.html
 
+    # Default Bash from Original script
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     chsh -s "$HOMEBREW_PREFIX/bin/bash" &> /dev/null
 
+    # Prefered shell env
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     chsh -s "$HOMEBREW_PREFIX/bin/zsh" &> /dev/null
-    #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
     print_result $? "Bash (use latest version)"
 
