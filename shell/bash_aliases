@@ -29,6 +29,15 @@ alias rm="rm -rf"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+
+# Tomcat specific
+alias tstart="/Library/Tomcat/bin/startup.sh"
+alias tstop="/Library/Tomcat/bin/shutdown.sh"
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
 # Load OS specific aliases
 
 if [ "$OS" == "osx" ]; then
