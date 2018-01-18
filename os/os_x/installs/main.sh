@@ -48,24 +48,25 @@ main() {
 
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"    
     brew_install "Firefox" "firefox" "caskroom/cask" "cask"
-    brew_install "Firefox Developer" "firefoxdeveloperedition" "caskroom/versions" "cask"
+    # Not on Cask anymore
+    # brew_install "Firefox Developer" "firefoxdeveloperedition" "caskroom/versions" "cask"
     brew_install "Opera" "opera" "caskroom/cask" "cask"
 
     
     # Image traitment optimisation
-    brew_install "FFmpeg" "ffmpeg"
-    brew_install "ImageAlpha" "imagealpha" "caskroom/cask" "cask"
-    brew_install "ImageMagick" "imagemagick --with-webp"
-    brew_install "ImageOptim" "imageoptim" "caskroom/cask" "cask"
+    # brew_install "FFmpeg" "ffmpeg"
+    # brew_install "ImageAlpha" "imagealpha" "caskroom/cask" "cask"
+    # brew_install "ImageMagick" "imagemagick --with-webp"
+    # brew_install "ImageOptim" "imageoptim" "caskroom/cask" "cask"
 
     # Animated screencapture
-    brew_install "LICEcap" "licecap" "caskroom/cask" "cask"
+    # brew_install "LICEcap" "licecap" "caskroom/cask" "cask"
 
     # Free Office tools
     brew_install "LibreOffice" "libreoffice" "caskroom/cask" "cask"
 
     #brew_install "tmux" "tmux"
-    brew_install "Transmission" "transmission" "caskroom/cask" "cask"
+    # brew_install "Transmission" "transmission" "caskroom/cask" "cask"
     brew_install "Android File Transfer" "android-file-transfer" "caskroom/cask" "cask"
 
     brew_install "Slack" "slack" "caskroom/cask" "cask"
