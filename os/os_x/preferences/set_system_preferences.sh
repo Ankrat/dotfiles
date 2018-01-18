@@ -6,9 +6,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 set_preferences() {
-    
-    ask_for_sudo
-    
+        
     execute "defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true" \
         "Prevent Time Machine from prompting to use new hard drives as backup volume"
 

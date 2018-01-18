@@ -277,7 +277,20 @@ main() {
         ./os/install_node_versions.sh
         print_in_green "\n  ---\n\n"
 
+        # ./os/install_npm_packages.sh
+
+    fi
+
+
+    print_info "Install node global"
+
+    ask_for_confirmation "Do you want to install node globally?"
+    printf "\n"
+
+    if answer_is_yes; then
+
         ./os/install_npm_packages.sh
+        print_in_green "\n  ---\n\n"
 
     fi
 
@@ -289,6 +302,8 @@ main() {
     printf "\n"
 
     if answer_is_yes; then
+        ask_for_sudo
+
         ./os/set_preferences.sh
     fi
 

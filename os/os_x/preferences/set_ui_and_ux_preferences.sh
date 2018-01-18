@@ -48,8 +48,9 @@ set_preferences() {
     execute "defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true" \
         "Expand save panel by default"
 
-    execute "defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2" \
-        "Set sidebar icon size to medium"
+    # Possible values: [small] `1`, [medium] `2` and [large] `3`
+    execute "defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1" \
+        "Set sidebar icon size to small"
 
     execute "defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false" \
         "Disable the over-the-top focus ring animation"

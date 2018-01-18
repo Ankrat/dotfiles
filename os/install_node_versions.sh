@@ -46,24 +46,26 @@ export NVM_DIR="'$NVM_DIRECTORY'"
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         # Trigger a FATAL ERROR NOT A GIT REPO
         # FIX ? => git init $NVM_DIRECTORY
-        # cd "$NVM_DIRECTORY" \
-        #     && git init
+        cd "$NVM_DIRECTORY" \
+            && git init &> /dev/null
+        # Return to the setup.sh directory
+        cd "$(dirname "$BASH_SOURCE")"
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -        
-        # git clone "$NVM_GIT_REPO_URL" "$NVM_DIRECTORY" &> /dev/null
-        # print_result $? "nvm"
+        git clone "$NVM_GIT_REPO_URL" "$NVM_DIRECTORY" &> /dev/null
+        print_result $? "nvm"
 
-        # if [ $? -eq 0 ]; then
-        #     printf "%s" "$CONFIGS" >> "$HOME/.bash.local" \
-        #         && source "$HOME/.bash.local"
-        #     print_result $? "nvm (update ~/.bash.local)"
-        # fi
+        if [ $? -eq 0 ]; then
+            printf "%s" "$CONFIGS" >> "$HOME/.bash.local" \
+                && source "$HOME/.bash.local"
+            print_result $? "nvm (update ~/.bash.local)"
+        fi
         
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         # Replacement script
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | NVM_DIR=$NVM_DIRECTORY PROFILE=$HOME/.bash.local bash
-        touch $HOME/.bash.local
+        # curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | NVM_DIR=$NVM_DIRECTORY PROFILE=$HOME/.bash.local bash
+        # touch $HOME/.bash.local
     fi
 
     if [ -d "$NVM_DIRECTORY" ]; then
