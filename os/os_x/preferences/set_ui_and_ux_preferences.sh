@@ -49,7 +49,7 @@ set_preferences() {
         "Expand save panel by default"
 
     # Possible values: [small] `1`, [medium] `2` and [large] `3`
-    execute "defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1" \
+    execute "sudo defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1" \
         "Set sidebar icon size to small"
 
     execute "defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false" \
