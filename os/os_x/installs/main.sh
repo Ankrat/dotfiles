@@ -33,6 +33,7 @@ main() {
     brew_install "zsh Completion" "zsh-completions"
     
     ./change_default_bash_version.sh
+    ./install_oh_my_zsh.sh
 
     print_in_green "\n  ---\n\n"
 
