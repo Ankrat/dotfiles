@@ -94,7 +94,7 @@ main() {
     
     # Make OS X use the Zsh version installed through Homebrew
     # https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/chsh.1.html
-    sudo chsh -s "$HOMEBREW_PREFIX/bin/zsh" &> /dev/null
+    sudo chsh -s "$HOMEBREW_PREFIX/bin/zsh" #&> /dev/null
 
     print_result $? "zsh (use latest version)"
 
