@@ -26,13 +26,18 @@ main() {
     # brew_install "Bash" "bash"
     # brew_install "Bash Completion 2" "bash-completion2" "homebrew/versions"
 
-
+    brew_install "iTerm 2" "iterm2" "caskroom/cask" "cask"
+    
     # Prefered shell env
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     brew_install "zsh" "zsh"
     brew_install "zsh Completion" "zsh-completions"
     
-    ./change_default_bash_version.sh
+    # Change bash to zsh
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # ./change_default_bash_version.sh # Default script for bash only
+
+    ./change_default_terminal_version.sh
     ./install_oh_my_zsh.sh
 
     print_in_green "\n  ---\n\n"
@@ -40,7 +45,6 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     brew_install "Visual Studio Code" "visual-studio-code" "caskroom/cask" "cask"
-    #brew_install "iTerm 2" "iterm2" "caskroom/cask" "cask"
     
     brew_install "1Password" "1password" "caskroom/cask" "cask"
     brew_install "Filezilla" "filezilla" "caskroom/cask" "cask"

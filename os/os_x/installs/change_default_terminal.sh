@@ -22,18 +22,17 @@ main() {
 
 
 
-
-
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    # Default Bash from Original script
+    # Prefered shell env
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Check if latest version of `Bash` is installed
 
-    if ! brew list bash &> /dev/null; then
-        print_error "Bash 4.x is required, please install it!\n"
+    if ! brew list zsh &> /dev/null; then
+        print_error "zsh is required, please install it!\n"
         exit 1
     fi
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -50,17 +49,16 @@ main() {
     HOMEBREW_PREFIX="$(brew --prefix)"
 
     if [ -z "$(cat /etc/shells | grep "$HOMEBREW_PREFIX")" ]; then
-        sudo sh -c "printf \"$HOMEBREW_PREFIX/bin/bash\n\" >> /etc/shells"
-        print_result $? "Bash (add \`$HOMEBREW_PREFIX/bin/bash\` in \`/etc/shells\`)"
+        sudo sh -c "printf \"$HOMEBREW_PREFIX/bin/zsh\n\" >> /etc/shells"
+        print_result $? "zsh (add \`$HOMEBREW_PREFIX/bin/zsh\` in \`/etc/shells\`)"
     fi
 
-    # Make OS X use the Bash version installed through Homebrew
+    
+    # Make OS X use the Zsh version installed through Homebrew
     # https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/chsh.1.html
-    chsh -s "$HOMEBREW_PREFIX/bin/bash" &> /dev/null
+    chsh -s "$HOMEBREW_PREFIX/bin/zsh" &> /dev/null
 
-    print_result $? "Bash (use latest version)"
-
-
+    print_result $? "zsh (use latest version)"
 
 }
 

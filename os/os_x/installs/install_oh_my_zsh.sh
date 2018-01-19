@@ -5,11 +5,10 @@ cd "$(dirname "$BASH_SOURCE")" \
 
     declare -r ZSH_DIRECTORY="$HOME/.zsh"
     declare -r OHMYZSH_DIRECTORY="$HOME/.oh-my-zsh"
+    declare -r ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
     declare -r POWERLINE_GIT_REPOSITORY_URL="https://github.com/powerline/fonts.git"
 
-    declare -r PLUGINS='plugins={
-
-    }'
+    declare -r PLUGINS='plugins=(git node npm bower brew osx extract z github jira)'
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -63,23 +62,22 @@ main() {
     printf "%s" curl -LsS https://raw.github.com/Ankrat/Cobalt2-iterm/master/cobalt2.zsh-theme >> "$HOME/.oh-my-zsh/themes/"
 
     # Open up your ZSH preferences at ~/.zshrc and change the theme variable to ZSH_THEME="cobalt2".
-    # plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
-    if grep -rli 'ZSH_THEME=' "$HOME/.zshrc" then
-        grep -rli 'ZSH_THEME=' "$HOME/.zshrc" | xargs -I@ sed -i -e 's/.*ZSH_THEME=.*/ZSH_THEME="cobalt2"/' @
+    if grep -rli 'ZSH_THEME="' "$HOME/.zshrc" then
+        grep -rli 'ZSH_THEME="' "$HOME/.zshrc" | xargs -I@ sed -i -e 's/.*ZSH_THEME=".*/ZSH_THEME="cobalt2"/' @
     fi
 
     
-
-    # if ! grep -rli 'plugins=' "$HOME/.zshrc" then
-
-    #     if [ $? -eq 0 ]; then
-    #         printf "%s" "$PLUGINS" >> "$HOME/.zshrc" \
-    #             && source "$HOME/.zshrc"
-    #         print_result $? "ohMyZsh (update ~/.zshrc)"
-    #     fi
-
-    # fi
+    # Open up your ZSH preferences at ~/.zshrc and change plugins to install.
+    # plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+    if [ $? -eq 0 ]; then
+        printf "%s" "$PLUGINS" >> "$HOME/.zshrc" \
+            && source "$HOME/.zshrc"
+        print_result $? "ohMyZsh (update ~/.zshrc)"
+    fi
     
+
+
+
     print_result $? "Theme added "
 
     # In iTerm2 access the Preferences pane on the Profiles tab.
