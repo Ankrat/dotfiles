@@ -14,19 +14,9 @@ set_preferences() {
         "Disable power button from putting your mac in Stand-by mode"
 
     ###############################################################################
-    # SSD-specific tweaks                                                         #
-    ###############################################################################
-
-    execute "sudo pmset -a hibernatemode 0" \
-        "Disable hibernation (speeds up entering sleep mode)"
-
-
-    execute "sudo pmset -a sms 0" \
-        "Disable the sudden motion sensor as it’s not useful for SSDs"
-
-    ###############################################################################
     # NOT PERMITTED
     ###############################################################################
+
     # execute "rm /private/var/vm/sleepimage" \
     #     "Remove the sleep image file to save disk space"
 
@@ -35,6 +25,15 @@ set_preferences() {
 
     # execute "chflags uchg /private/var/vm/sleepimage" \
     #     "...and make sure it can’t be rewritten"
+
+    # SSD-specific tweaks                                                         #
+
+    # execute "sudo pmset -a hibernatemode 0" \
+    #     "Disable hibernation (speeds up entering sleep mode)"
+
+
+    # execute "sudo pmset -a sms 0" \
+    #     "Disable the sudden motion sensor as it’s not useful for SSDs"
 
 
 }
