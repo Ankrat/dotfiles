@@ -18,7 +18,7 @@ set_preferences() {
     execute "defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string $iTermPreferencesDirectory" \
         "Specify the preferences directory"
     
-    execute "defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true"
+    execute "defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true" \
         "Tell iTerm2 to use the custom preferences in the directory"
     
     # execute "osascript set_custom_terminal_theme.scpt" \
