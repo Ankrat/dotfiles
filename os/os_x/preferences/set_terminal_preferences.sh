@@ -20,6 +20,12 @@ set_preferences() {
     
     execute "defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true" \
         "Tell iTerm2 to use the custom preferences in the directory"
+
+    print_info "Import cobalt2 preset colors"
+    
+    /usr/libexec/PlistBuddy -c "Add 'Custom Color Presets':'cobalt2' dict" ~/Library/Preferences/com.googlecode.iTerm2.plist
+    /usr/libexec/PlistBuddy -c "Merge '$(pwd)/$(dirname $0)/iterm2/cobalt2.itermcolors' 'Custom Color Presets':'cobalt2'" ~/Library/Preferences/com.googlecode.iTerm2.plist
+
     
     # execute "osascript set_custom_terminal_theme.scpt" \
     #     "Set custom terminal theme"

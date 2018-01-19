@@ -24,10 +24,10 @@ main() {
     ./set_terminal_preferences.sh
     ./set_textedit_preferences.sh
     ./set_trackpad_preferences.sh
-    # ./set_spotlight_preferences.sh
-    ./set_system_preferences.sh
     ./set_transmission_preferences.sh
     ./set_ui_and_ux_preferences.sh
+    # ./set_spotlight_preferences.sh
+    ./set_system_preferences.sh
 
     for i in ${PROCESSES_TO_TERMINATE[*]}; do
         killall "$i" &> /dev/null

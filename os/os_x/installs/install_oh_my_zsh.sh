@@ -50,16 +50,16 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     print_info "Installing OhMyZsh"
 
-    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh &> /dev/null
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh #&> /dev/null
     
-    cp "$OHMYZSH_DIRECTORY/templates/zshrc.zsh-template $HOME/.zshrc"
+    # cat "$OHMYZSH_DIRECTORY/templates/zshrc.zsh-template" > "$HOME/.zshrc" &> /dev/null
     print_result $? "OhMyZsh installed"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # ohMyZsh theme
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # Drop the cobalt2.zsh-theme file in to the ~/.oh-my-zsh/themes/ directory.
-    printf "%s" curl -LsS https://raw.github.com/Ankrat/Cobalt2-iterm/master/cobalt2.zsh-theme >> "$HOME/.oh-my-zsh/themes/cobalt2.zsh-theme"
+    curl -LsS https://raw.github.com/Ankrat/Cobalt2-iterm/master/cobalt2.zsh-theme >> "$HOME/.oh-my-zsh/themes/cobalt2.zsh-theme"
 
     # Open up your ZSH preferences at ~/.zshrc and change the theme variable to ZSH_THEME="cobalt2".
     if grep -rli 'ZSH_THEME="' "$HOME/.zshrc"; then
@@ -70,8 +70,7 @@ main() {
     # Open up your ZSH preferences at ~/.zshrc and change plugins to install.
     # plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
     if [ $? -eq 0 ]; then
-        printf "%s" "$PLUGINS" >> "$HOME/.zshrc" \
-            && source "$HOME/.zshrc"
+        printf "%s" "$PLUGINS" >> "$HOME/.zshrc"
         print_result $? "ohMyZsh (update ~/.zshrc)"
     fi
     
