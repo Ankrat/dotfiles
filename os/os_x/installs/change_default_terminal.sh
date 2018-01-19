@@ -28,10 +28,10 @@ main() {
 
     # Check if latest version of `Bash` is installed
 
-    if ! brew list zsh &> /dev/null; then
-        print_error "zsh is required, please install it!\n"
-        exit 1
-    fi
+    # if ! brew list zsh &> /dev/null; then
+    #     print_error "zsh is required, please install it!\n"
+    #     exit 1
+    # fi
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
