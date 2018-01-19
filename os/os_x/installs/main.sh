@@ -23,8 +23,8 @@ main() {
     
     # Default Bash from Original script
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    # brew_install "Bash" "bash"
-    # brew_install "Bash Completion 2" "bash-completion2" "homebrew/versions"
+    brew_install "Bash" "bash"
+    brew_install "Bash Completion 2" "bash-completion2" "homebrew/versions"
 
     brew_install "iTerm 2" "iterm2" "caskroom/cask" "cask"
     
@@ -35,7 +35,7 @@ main() {
     
     # Change bash to zsh
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    # ./change_default_bash_version.sh # Default script for bash only
+    ./change_default_bash_version.sh # Default script for bash only
 
     ./change_default_terminal.sh
     ./install_oh_my_zsh.sh
@@ -86,6 +86,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    print_info "Looking for updates"
     ./update_and_upgrade.sh
     ./cleanup.sh
 
