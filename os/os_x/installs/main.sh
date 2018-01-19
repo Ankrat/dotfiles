@@ -70,7 +70,7 @@ main() {
     # Free Office tools
     brew_install "LibreOffice" "libreoffice" "caskroom/cask" "cask"
 
-    #brew_install "tmux" "tmux"
+    brew_install "tmux" "tmux"
     # brew_install "Transmission" "transmission" "caskroom/cask" "cask"
     brew_install "Android File Transfer" "android-file-transfer" "caskroom/cask" "cask"
 
