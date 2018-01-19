@@ -4,7 +4,6 @@ cd "$(dirname "$BASH_SOURCE")" \
     && source "utils.sh"
 
 declare -a DIRECTORIES=(
-    "$HOME/.nvm"
     "$HOME/Downloads/torrents"
     "$HOME/DevSandbox"
 )

@@ -28,11 +28,26 @@ alias q="exit"
 alias rm="rm -rf"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# create static server in the folder this is run to
+
+alias serve="python -m SimpleHTTPServer"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 # Tomcat specific
 alias tstart="/Library/Tomcat/bin/startup.sh"
 alias tstop="/Library/Tomcat/bin/shutdown.sh"
+
+
+# tail bosweb log files
+alias tailBWapp="tail -F /private/var/log/bosweb/Blackwells-websiteinstance_IS_UNDEFINED.log"
+alias tailBWinstance="tail -F /private/var/log/bosweb/Blackwells-systeminstance_IS_UNDEFINED.log"
+alias tailBobcat="tail -F /private/var/log/bosweb/bos-bobcat-application.log"
+
+# Sauce Lab Shortcuts for running localhost testing
+alias bt="sc -u yann-le-corre -k 32f1dfa7-6308-4db1-9e83-c95b4033c490"
+
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
