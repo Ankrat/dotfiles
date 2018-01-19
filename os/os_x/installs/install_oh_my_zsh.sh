@@ -59,10 +59,10 @@ main() {
     # ohMyZsh theme
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # Drop the cobalt2.zsh-theme file in to the ~/.oh-my-zsh/themes/ directory.
-    printf "%s" curl -LsS https://raw.github.com/Ankrat/Cobalt2-iterm/master/cobalt2.zsh-theme >> "$HOME/.oh-my-zsh/themes/"
+    printf "%s" curl -LsS https://raw.github.com/Ankrat/Cobalt2-iterm/master/cobalt2.zsh-theme >> "$HOME/.oh-my-zsh/themes/cobalt2.zsh-theme"
 
     # Open up your ZSH preferences at ~/.zshrc and change the theme variable to ZSH_THEME="cobalt2".
-    if grep -rli 'ZSH_THEME="' "$HOME/.zshrc" then
+    if grep -rli 'ZSH_THEME="' "$HOME/.zshrc"; then
         grep -rli 'ZSH_THEME="' "$HOME/.zshrc" | xargs -I@ sed -i -e 's/.*ZSH_THEME=".*/ZSH_THEME="cobalt2"/' @
     fi
 
