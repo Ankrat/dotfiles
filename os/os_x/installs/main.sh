@@ -35,9 +35,9 @@ main() {
     
     # Change bash to zsh
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    # ./change_default_bash_version.sh # Default script for bash only
+    ./change_default_bash_version.sh # Default script for bash only
 
-    ./change_default_terminal.sh
+    # ./change_default_terminal.sh
     ./install_oh_my_zsh.sh
 
     print_in_green "\n  ---\n\n"
