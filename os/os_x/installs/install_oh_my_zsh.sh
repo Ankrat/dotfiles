@@ -37,7 +37,7 @@ main() {
     # Powerline fonts
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    print_info "Getting font for theme"
+    print_info "Getting Inconsolata font for the theme"
     
     git clone "$POWERLINE_GIT_REPOSITORY_URL" --depth=1
     # install
