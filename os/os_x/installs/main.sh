@@ -49,7 +49,9 @@ main() {
     #brew_install "1Password" "1password" "caskroom/cask" "cask"
     brew_install "Filezilla" "filezilla" "caskroom/cask" "cask"
     #brew_install "Sourcetree" "sourcetree" "caskroom/cask" "cask"
-
+    #brew_install "1Password" "1password" "caskroom/cask" "cask"
+    brew_install "Java8" "java8" "caskroom/cask" "cask"
+    #brew cask install homebrew/cask-versions/java8
 
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"    
     brew_install "Firefox" "firefox" "caskroom/cask" "cask"
