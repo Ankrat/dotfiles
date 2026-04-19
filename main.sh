@@ -8,7 +8,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 main() {
 
-    if [ "$(get_os)" == "osx" ]; then
+    if [ "$(get_os)" = "osx" ]; then
         ./os/os_x/preferences/main.sh \
             || { print_error "Failed to apply macOS preferences!"; exit 1; }
     else
