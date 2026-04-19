@@ -10,7 +10,7 @@ main() {
     if [ "$(get_os)" == "osx" ]; then
         ./os/os_x/preferences/main.sh
     else
-        print_error "Sorry, this script is intended only for OS X!"
+        print_error "Sorry, this script is intended only for macOS!"
         exit 1
     fi
 
