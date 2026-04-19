@@ -1,8 +1,10 @@
 #!/bin/bash
 
 cd "$(dirname "$BASH_SOURCE")" \
-    && source "os/utils.sh" \
-    || exit 1
+    || { printf "Failed to change to script directory.\n"; exit 1; }
+
+source "os/utils.sh" \
+    || { printf "Failed to load os/utils.sh.\n"; exit 1; }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
